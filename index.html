@@ -28,6 +28,11 @@
         --theme: #c5a059 !important;
         --action: #c5a059 !important;
       }
+      img[src*="assets/imgs/icon/icon-s-"],
+      img[src*="assets/imgs/shape/img-s-"],
+      img[src*="arrow-right-half"] {
+        filter: hue-rotate(-32deg) saturate(55%) brightness(105%) !important;
+      }
       .blog:hover {
         background: linear-gradient(
           135deg,
@@ -610,13 +615,13 @@
                 class="show-light"
                 src="assets/imgs/logo/logo.png"
                 alt="Site Logo"
-                style="height: 35px"
+                style="height: 50px"
               />
               <img
                 class="show-dark"
                 src="assets/imgs/logo/logo-light.png"
                 alt="Site Logo"
-                style="height: 35px"
+                style="height: 50px"
               />
             </a>
           </div>
