@@ -1,0 +1,641 @@
+/* ============================================================
+   RENOVA — Premium Design Override
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap');
+
+/* ── Root tokens ── */
+:root {
+  --gold:        #c5a059;
+  --gold-light:  #f1d48f;
+  --gold-dark:   #846226;
+  --gold-grad:   linear-gradient(135deg, #f1d48f 0%, #c5a059 50%, #846226 100%);
+  --bg-deep:     #080808;
+  --bg-card:     rgba(255,255,255,0.03);
+  --border-dim:  rgba(255,255,255,0.07);
+  --text-body:   rgba(255,255,255,0.65);
+}
+
+/* ── Force dark everywhere ── */
+html, body { background-color: var(--bg-deep) !important; }
+body { color: rgba(255,255,255,0.88) !important; }
+
+/* keep light-mode switcher functional but default dark */
+body:not(.dark) {
+  --bg-deep:    #f5f4f2;
+  --bg-card:    rgba(0,0,0,0.03);
+  --border-dim: rgba(0,0,0,0.07);
+  --text-body:  rgba(0,0,0,0.6);
+}
+body:not(.dark),
+body:not(.dark) .section-title,
+body:not(.dark) h1,body:not(.dark) h2,
+body:not(.dark) h3,body:not(.dark) h4 {
+  color: #111 !important;
+}
+body:not(.dark) .text,
+body:not(.dark) p { color: rgba(0,0,0,0.58) !important; }
+
+/* ============================================================
+   HEADER — slim, glassy, always elevated
+   ============================================================ */
+.header-area {
+  background: rgba(8,8,8,0.82) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  padding: 0 !important;
+}
+body:not(.dark) .header-area {
+  background: rgba(250,249,247,0.88) !important;
+  border-bottom-color: rgba(0,0,0,0.07) !important;
+}
+.header-area__inner { padding: 18px 0 !important; }
+
+/* nav links */
+.main-menu ul li a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.65) !important;
+  transition: color .25s !important;
+}
+body:not(.dark) .main-menu ul li a { color: rgba(0,0,0,0.55) !important; }
+.main-menu ul li a:hover { color: var(--gold) !important; }
+
+/* CTA button */
+.wc-btn-primary {
+  background: var(--gold-grad) !important;
+  border: none !important;
+  color: #0a0a0a !important;
+  border-radius: 6px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px !important;
+  padding: 13px 26px !important;
+}
+
+/* ============================================================
+   HERO — refined layout, less aggressive typography
+   ============================================================ */
+.hero-area { background: var(--bg-deep) !important; overflow: hidden; }
+body:not(.dark) .hero-area { background: #f5f4f2 !important; }
+
+.hero-area .section-title {
+  font-size: clamp(42px, 5.5vw, 82px) !important;
+  line-height: 1.0 !important;
+  letter-spacing: -1px !important;
+  font-weight: 900 !important;
+}
+
+/* hide the clunky floating info-text block */
+.hero-area .info-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  color: rgba(255,255,255,0.35) !important;
+  font-weight: 400 !important;
+}
+body:not(.dark) .hero-area .info-text { color: rgba(0,0,0,0.3) !important; }
+
+.hero-area .text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: var(--text-body) !important;
+  max-width: 440px;
+}
+
+/* ============================================================
+   SECTION BACKGROUNDS — alternating depth
+   ============================================================ */
+.service-area,
+.enterprise-area,
+.packages-area,
+.cta-area,
+.contact-area,
+footer.footer-area {
+  background: var(--bg-deep) !important;
+}
+body:not(.dark) .service-area,
+body:not(.dark) .enterprise-area,
+body:not(.dark) .packages-area,
+body:not(.dark) .cta-area,
+body:not(.dark) .contact-area,
+body:not(.dark) footer.footer-area {
+  background: #f5f4f2 !important;
+}
+
+.about-area,
+.testimonial-area,
+.work-area {
+  background: #0e0e0e !important;
+}
+body:not(.dark) .about-area,
+body:not(.dark) .testimonial-area,
+body:not(.dark) .work-area {
+  background: #eeecea !important;
+}
+
+/* ============================================================
+   SECTION TITLES — consistent, refined
+   ============================================================ */
+.section-title {
+  letter-spacing: -0.5px !important;
+  line-height: 1.05 !important;
+}
+.section-title span {
+  background: var(--gold-grad) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+.section-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  color: var(--gold) !important;
+  font-weight: 500 !important;
+}
+.text, p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  color: var(--text-body) !important;
+}
+body:not(.dark) .text,
+body:not(.dark) p { color: rgba(0,0,0,0.55) !important; }
+
+/* ============================================================
+   SERVICE BOXES — clean numbered list, premium hover
+   ============================================================ */
+.service-box {
+  border-top: 1px solid var(--border-dim) !important;
+  border-bottom: none !important;
+  padding: 36px 0 !important;
+  transition: all .3s ease !important;
+  background: transparent !important;
+}
+.service-box:hover {
+  background: transparent !important;
+  padding-left: 20px !important;
+}
+.service-box .number {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--gold) !important;
+  letter-spacing: 2px !important;
+}
+.service-box .title {
+  font-size: clamp(20px, 2vw, 26px) !important;
+  letter-spacing: -0.3px !important;
+  line-height: 1.15 !important;
+  transition: color .3s !important;
+}
+.service-box:hover .title { color: var(--gold) !important; }
+.service-box .text {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  max-width: 360px;
+}
+.service-box .feature-list ul li {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: var(--text-body) !important;
+  letter-spacing: .3px !important;
+}
+body:not(.dark) .service-box .feature-list ul li { color: rgba(0,0,0,0.5) !important; }
+
+/* icon circles in service — subtle */
+.service-box .icon img { opacity: 0.5; transition: opacity .3s; }
+.service-box:hover .icon img { opacity: 1; }
+
+/* ============================================================
+   ENTERPRISE / TECH EXPERTISE
+   ============================================================ */
+.expertise-box {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-radius: 14px !important;
+  padding: 28px 20px !important;
+  transition: all .3s ease !important;
+}
+.expertise-box:hover {
+  border-color: var(--gold) !important;
+  transform: translateY(-4px) !important;
+  background: rgba(197,160,89,0.05) !important;
+}
+.expertise-box .name {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+  color: rgba(255,255,255,0.7) !important;
+  text-transform: uppercase !important;
+}
+body:not(.dark) .expertise-box .name { color: rgba(0,0,0,0.6) !important; }
+
+/* ============================================================
+   PRICING CARDS — deep glass, proper hierarchy
+   ============================================================ */
+.pricing-card {
+  background: rgba(255,255,255,0.025) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 20px !important;
+  padding: 40px 32px !important;
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease !important;
+  backdrop-filter: blur(12px) !important;
+}
+.pricing-card:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(197,160,89,0.45) !important;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(197,160,89,0.15) !important;
+}
+.pricing-card.popular {
+  background: rgba(197,160,89,0.06) !important;
+  border-color: rgba(197,160,89,0.35) !important;
+  box-shadow: 0 8px 32px rgba(197,160,89,0.12) !important;
+}
+body:not(.dark) .pricing-card {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.07) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05) !important;
+}
+body:not(.dark) .pricing-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(197,160,89,0.3) !important;
+}
+body:not(.dark) .pricing-card.popular {
+  background: #fffdf8 !important;
+  border-color: rgba(197,160,89,0.4) !important;
+}
+
+.pricing-card .package-name {
+  font-size: 22px !important;
+  letter-spacing: 2px !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+.pricing-card .package-features li {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  color: var(--text-body) !important;
+  padding: 6px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  margin-bottom: 0 !important;
+}
+body:not(.dark) .pricing-card .package-features li {
+  color: rgba(0,0,0,0.6) !important;
+  border-bottom-color: rgba(0,0,0,0.04) !important;
+}
+.pricing-card .package-features li:last-child { border-bottom: none !important; }
+.pricing-card .package-features li i { color: var(--gold) !important; font-size: 11px !important; }
+
+.btn-pricing {
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  padding: 14px 20px !important;
+  margin-top: 28px !important;
+}
+body.dark .btn-pricing,
+.btn-pricing {
+  border-color: rgba(255,255,255,0.2) !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+body:not(.dark) .btn-pricing {
+  border-color: rgba(0,0,0,0.2) !important;
+  color: rgba(0,0,0,0.65) !important;
+}
+.btn-pricing:hover,
+.pricing-card.popular .btn-pricing {
+  background: var(--gold-grad) !important;
+  border-color: transparent !important;
+  color: #0a0a0a !important;
+}
+
+/* ============================================================
+   TESTIMONIAL CARDS
+   ============================================================ */
+.testimonial-box {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 20px !important;
+  padding: 36px !important;
+}
+body:not(.dark) .testimonial-box {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.06) !important;
+}
+.testimonial-box .text {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  font-style: italic !important;
+}
+.testimonial-box .name {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: .5px !important;
+}
+.testimonial-box .meta-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  color: var(--gold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.contact-form-wrapper {
+  background: rgba(255,255,255,0.02) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 24px !important;
+  padding: 48px !important;
+  backdrop-filter: blur(16px) !important;
+}
+body:not(.dark) .contact-form-wrapper {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.07) !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.07) !important;
+}
+.form-control-custom {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 10px !important;
+  padding: 15px 18px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.85) !important;
+  transition: border-color .25s, box-shadow .25s !important;
+}
+body:not(.dark) .form-control-custom {
+  background: #f8f7f5 !important;
+  border-color: rgba(0,0,0,0.08) !important;
+  color: #111 !important;
+}
+.form-control-custom:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(197,160,89,0.12) !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+body:not(.dark) .form-control-custom:focus {
+  background: #fff !important;
+}
+.form-control-custom::placeholder { color: rgba(255,255,255,0.25) !important; }
+body:not(.dark) .form-control-custom::placeholder { color: rgba(0,0,0,0.3) !important; }
+
+.btn-submit-custom {
+  background: var(--gold-grad) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: #0a0a0a !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  padding: 17px 32px !important;
+  transition: opacity .25s, transform .25s !important;
+}
+.btn-submit-custom:hover {
+  opacity: .88 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px rgba(197,160,89,0.3) !important;
+  border: none !important;
+  padding: 17px 32px !important;
+  color: #0a0a0a !important;
+}
+
+/* contact cards */
+.contact-card {
+  background: rgba(255,255,255,0.025) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 16px !important;
+  padding: 28px 24px !important;
+  transition: border-color .3s, transform .3s !important;
+}
+.contact-card:hover {
+  border-color: rgba(197,160,89,0.4) !important;
+  transform: translateX(6px) !important;
+  box-shadow: none !important;
+}
+body:not(.dark) .contact-card {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.07) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05) !important;
+}
+.card-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  background: rgba(197,160,89,0.12) !important;
+  border: 1px solid rgba(197,160,89,0.2) !important;
+  font-size: 20px !important;
+  color: var(--gold) !important;
+}
+.contact-card:hover .card-icon {
+  background: var(--gold-grad) !important;
+  color: #0a0a0a !important;
+  transform: scale(1.05) rotate(0deg) !important;
+}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.cta-area .section-title {
+  font-size: clamp(36px, 5vw, 72px) !important;
+}
+.cta-area .wc-btn-underline {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
+  color: var(--gold) !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-area {
+  border-top: 1px solid rgba(255,255,255,0.06) !important;
+}
+body:not(.dark) .footer-area { border-top-color: rgba(0,0,0,0.07) !important; }
+.footer-area .text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.35) !important;
+}
+body:not(.dark) .footer-area .text { color: rgba(0,0,0,0.4) !important; }
+.footer-area .social-links a {
+  width: 36px !important;
+  height: 36px !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 13px !important;
+  transition: all .25s !important;
+}
+.footer-area .social-links a:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
+}
+body:not(.dark) .footer-area .social-links a {
+  border-color: rgba(0,0,0,0.12) !important;
+  color: rgba(0,0,0,0.4) !important;
+}
+
+/* ============================================================
+   PAGE HERO (subpages) — contact / packages / services
+   ============================================================ */
+.contact-hero-area {
+  background: var(--bg-deep) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+body:not(.dark) .contact-hero-area {
+  background: #f5f4f2 !important;
+  border-bottom-color: rgba(0,0,0,0.06) !important;
+}
+.contact-hero-area .section-title {
+  font-size: clamp(52px, 7vw, 96px) !important;
+  letter-spacing: -2px !important;
+}
+
+/* ============================================================
+   PORTFOLIO / WORK BOXES
+   ============================================================ */
+.work-box { border-radius: 16px !important; overflow: hidden !important; }
+.work-box .content {
+  background: rgba(8,8,8,0.88) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.work-box .title {
+  font-size: 18px !important;
+  letter-spacing: .5px !important;
+}
+.work-box .meta {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: var(--gold) !important;
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-area .number {
+  font-size: clamp(36px, 4vw, 56px) !important;
+  color: var(--gold) !important;
+  font-weight: 900 !important;
+  letter-spacing: -1px !important;
+}
+.about-service-box {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 16px !important;
+  padding: 28px !important;
+}
+body:not(.dark) .about-service-box {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.07) !important;
+}
+.about-service-box .counts .number {
+  font-size: 40px !important;
+  color: var(--gold) !important;
+}
+
+/* ============================================================
+   INCLUSION ITEMS
+   ============================================================ */
+.inclusion-item {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+body:not(.dark) .inclusion-item { color: rgba(0,0,0,0.65) !important; }
+.inclusion-item i { color: var(--gold) !important; font-size: 16px !important; }
+
+/* ============================================================
+   SCROLL-TO-TOP & PROGRESS RING
+   ============================================================ */
+.progress-wrap { background: var(--bg-deep) !important; border: 1px solid rgba(255,255,255,0.08) !important; border-radius: 50% !important; }
+.progress-wrap::after { color: var(--gold) !important; }
+.progress-wrap svg.progress-circle path { stroke: var(--gold) !important; }
+
+/* ============================================================
+   SWITCHER PANEL
+   ============================================================ */
+.switcher__area {
+  background: #111 !important;
+  border-left: 1px solid rgba(255,255,255,0.07) !important;
+}
+body:not(.dark) .switcher__area { background: #fff !important; border-left-color: rgba(0,0,0,0.08) !important; }
+
+/* ============================================================
+   FEATURE / WHY CHOOSE US (gold gradient bg from template)
+   ============================================================ */
+.feature-area .section-title,
+.feature-area .section-title span,
+.feature-area .text,
+.feature-area p,
+.feature-area .feature-box .title,
+.feature-area .feature-box .text {
+  -webkit-text-fill-color: #0a0a0a !important;
+  color: #0a0a0a !important;
+}
+
+/* ============================================================
+   OFFCANVAS NAV
+   ============================================================ */
+.offcanvas-3__area {
+  background: #0a0a0a !important;
+  border-right: 1px solid rgba(255,255,255,0.06) !important;
+}
+body:not(.dark) .offcanvas-3__area { background: #fff !important; }
+.offcanvas-3__menu ul li a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+/* ============================================================
+   CLIENTS / BRAND LOGOS — subtle
+   ============================================================ */
+.client-box img { opacity: 0.4; filter: grayscale(1); transition: all .3s; }
+.client-box:hover img { opacity: 0.9; filter: grayscale(0); }
+
+/* ============================================================
+   MISC UTILITIES
+   ============================================================ */
+/* gold underline buttons */
+.wc-btn-underline {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+/* remove harsh box-shadow on nav icon buttons */
+.header__navicon button { color: rgba(255,255,255,0.75) !important; }
+body:not(.dark) .header__navicon button { color: rgba(0,0,0,0.65) !important; }
+
+/* badge popular */
+.badge-popular {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 2px !important;
+  border-radius: 4px !important;
+  padding: 5px 12px !important;
+}
