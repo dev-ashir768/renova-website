@@ -588,6 +588,24 @@
       .body-wrapper footer {
         flex-shrink: 0 !important;
       }
+
+
+
+      /* Premium Map styling */
+      .map-wrapper {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+      body:not(.dark) .map-wrapper {
+        border-color: rgba(0, 0, 0, 0.08) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+      }
+      body.dark .map-wrapper iframe {
+        filter: grayscale(1) invert(0.9) contrast(1.2);
+      }
     </style>
   </head>
 
@@ -619,9 +637,6 @@
       </div>
     </div>
 
-    <!-- Cursor Animation -->
-    <div class="cursor1"></div>
-    <div class="cursor2"></div>
 
     <!-- Sroll to top -->
     <div class="progress-wrap">
@@ -1007,7 +1022,27 @@
                 </div>
               </div>
             </section>
-            <!-- contact area end  -->
+            <!-- contact map area start -->
+            <section class="contact-map-area" style="padding-bottom: 80px; background: rgba(255, 255, 255, 0.01);">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="map-wrapper">
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.8085822363!2d-79.51814144365778!3d43.718155661139414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1718300000000!5m2!1sen!2sca" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; display: block;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- contact map area end -->
           </main>
 
           <!-- footer area start  -->
