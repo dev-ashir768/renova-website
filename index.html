@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Renova Marketing Solutions is a full-service marketing & technology agency providing website development, branding, SEO, apps, social media marketing, influencer campaigns, and digital billboard advertising."
+      content="Renova Marketing Solutions is a premier marketing and technology agency specializing in web development, branding, SEO, mobile apps, social media management."
     />
 
     <title>Renova Marketing Solutions | Marketing & Technology Agency</title>
@@ -31,6 +31,25 @@
       img[src*="assets/imgs/shape/img-s-"],
       img[src*="arrow-right-half"] {
         filter: hue-rotate(-32deg) saturate(55%) brightness(105%) !important;
+      }
+      /* Optimize spacing for consecutive sections sharing the same background color */
+      .service-area-inner,
+      .testimonial-area-inner,
+      .faq-area-inner,
+      .contact-area-inner,
+      .blog-area-inner {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+      }
+      @media only screen and (max-width: 1199px) {
+        .service-area-inner,
+        .testimonial-area-inner,
+        .faq-area-inner,
+        .contact-area-inner,
+        .blog-area-inner {
+          padding-top: 60px !important;
+          padding-bottom: 60px !important;
+        }
       }
       .blog:hover {
         background: linear-gradient(
@@ -416,7 +435,36 @@
           margin-top: 30px;
         }
       }
-    </style>
+    
+      /* Portfolio styling */
+      .work-area {
+        overflow: hidden;
+      }
+      .work-box {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .work-box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.5s ease;
+      }
+      .work-box:hover img {
+        transform: scale(1.05);
+      }
+      /* Dark mode adaptation for work slider content */
+      body.dark .work-box .content {
+        background-color: rgba(18, 18, 18, 0.9) !important;
+      }
+      body.dark .work-box .title {
+        color: #fff !important;
+      }
+      body.dark .work-box .meta {
+        color: #999 !important;
+      }
+</style>
   </head>
 
   <body class="font-heading-teko-bold">
@@ -549,12 +597,11 @@
           <nav class="nav-menu offcanvas-3__menu">
             <ul>
               <li><a href="#hero">home</a></li>
-              <li><a href="#about">about us</a></li>
               <li><a href="#services">services</a></li>
               <li><a href="#packages">packages</a></li>
-              <li><a href="#why-choose-us">why choose us</a></li>
-              <li><a href="#faq">faq</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -628,18 +675,17 @@
             <nav class="main-menu">
               <ul>
                 <li><a href="#hero">home</a></li>
-                <li><a href="#about">about us</a></li>
                 <li><a href="#services">services</a></li>
                 <li><a href="#packages">packages</a></li>
-                <li><a href="#why-choose-us">why choose us</a></li>
-                <li><a href="#faq">faq</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
               </ul>
             </nav>
           </div>
           <div class="header__button">
             <a href="#contact" class="wc-btn wc-btn-primary btn-text-flip">
-              <span data-text="Get Started">Get Started</span></a
+              <span data-text="Request Pricing">Request Pricing</span></a
             >
           </div>
           <div class="header__navicon d-xl-none">
@@ -742,8 +788,8 @@
                             href="#contact"
                             class="wc-btn wc-btn-underline btn-text-flip"
                           >
-                            <span data-text="get started now"
-                              >get started now</span
+                            <span data-text="request pricing"
+                              >request pricing</span
                             >
                             <img
                               class="show-light"
@@ -908,819 +954,6 @@
               </div>
             </div>
             <!-- clients area end  -->
-
-            <!-- about area start  -->
-            <section class="about-area" id="about">
-              <div class="container">
-                <div class="about-area-inner section-spacing">
-                  <div class="shape-1 has_fade_anim" data-fade-offset="0">
-                    <img
-                      class="show-light"
-                      src="assets/imgs/shape/img-s-66.webp"
-                      alt="image"
-                    />
-                    <img
-                      class="show-dark"
-                      src="assets/imgs/shape/img-s-66-light.webp"
-                      alt="image"
-                    />
-                  </div>
-                  <div class="section-content">
-                    <div class="section-title-wrapper">
-                      <div class="subtitle-wrapper">
-                        <span class="section-subtitle has_fade_anim"
-                          >01. Who we are</span
-                        >
-                      </div>
-                      <div class="title-wrapper has_fade_anim">
-                        <h2 class="section-title">
-                          Grow your business with
-                          <span>creative design</span> & strategic marketing!
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="content-bottom">
-                      <div
-                        class="clients-wrapper has_fade_anim"
-                        data-fade-from="left"
-                      >
-                        <div class="thumb">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/client/img-s-4.webp"
-                            alt="image"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/client/img-s-4-dark.webp"
-                            alt="image"
-                          />
-                        </div>
-                        <div class="info">
-                          <h3 class="number">100%</h3>
-                          <p class="text">dedicated & results-focused</p>
-                        </div>
-                      </div>
-                      <div class="info-wrapper">
-                        <div class="text-wrapper">
-                          <p class="text has_fade_anim">
-                            At Renova Marketing Solutions, we combine
-                            creativity, technology, and strategic marketing to
-                            help businesses succeed in a competitive digital
-                            landscape. Our mission is to provide businesses with
-                            innovative solutions that increase visibility,
-                            generate leads, improve customer engagement, and
-                            accelerate growth. Whether you're a startup, small
-                            business, or established company, we create
-                            customized strategies designed around your goals.
-                          </p>
-                        </div>
-                        <div
-                          class="btn-wrapper has_fade_anim"
-                          data-fade-from="top"
-                          data-fade-offset="100"
-                          data-ease="bounce"
-                        >
-                          <div class="btn-wrapper btn-move">
-                            <a
-                              href="#services"
-                              class="wc-btn wc-btn-circle btn-hover-bgchange btn-item"
-                              >Explore
-                              <br />
-                              Services</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="about-gallery-wrapper">
-                    <div class="thumb-1 has_fade_anim">
-                      <img
-                        src="assets/imgs/gallery/img-s-70.webp"
-                        alt="image"
-                      />
-                    </div>
-                    <div class="thumb-2">
-                      <img
-                        src="assets/imgs/gallery/img-s-71.webp"
-                        class="has_fade_anim"
-                        data-fade-from="right"
-                        data-fade-offset="50"
-                        data-delay="0.45"
-                        alt="image"
-                      />
-                      <div
-                        class="about-service-box has_fade_anim"
-                        data-fade-from="top"
-                        data-fade-offset="0"
-                        data-delay="0.90"
-                      >
-                        <div class="thumb">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/shape/img-s-67.webp"
-                            alt="image"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/shape/img-s-67-light.webp"
-                            alt="image"
-                          />
-                        </div>
-                        <p class="text">
-                          Make your business prosper with our expert team. We
-                          deliver custom solutions tailored specifically to your
-                          business goals.
-                        </p>
-                        <div class="counts">
-                          <span class="number">1.8</span
-                          ><span class="x">x</span>
-                          <span class="text">Faster Service</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- about area end  -->
-
-            <!-- feature area start  -->
-            <section class="feature-area" id="why-choose-us">
-              <div class="container">
-                <div class="feature-area-inner section-spacing-top">
-                  <div class="section-header">
-                    <div class="section-title-wrapper">
-                      <div
-                        class="shape-1 has_fade_anim"
-                        data-fade-offset="0"
-                        data-delay="0.8"
-                      >
-                        <img
-                          src="assets/imgs/shape/img-s-68.webp"
-                          alt="image"
-                        />
-                      </div>
-                      <div class="title-wrapper">
-                        <h2 class="section-title has_text_move_anim">
-                          Why Choose Renova
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="text-wrapper">
-                      <p class="text has_fade_anim">
-                        We combine creativity, technology, and data-driven
-                        marketing strategy to build products that deliver
-                        measurable results.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="features-wrapper-box">
-                    <div class="features-wrapper">
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.15"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-24.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Full-Service <br />
-                            Marketing & <br />
-                            Technology Agency
-                          </h3>
-                          <p class="text">
-                            From web and app development to digital billboards
-                            and influencer campaigns, we handle all your growth
-                            needs under one roof.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="right"
-                        data-delay="0.30"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-25.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Website, App & <br />
-                            Web App Experts
-                          </h3>
-                          <p class="text">
-                            Our dedicated engineers build fast, secure, and
-                            modern digital solutions tailored to achieve your
-                            specific business objectives.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.45"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-26.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Canadian <br />
-                            Influencer Network
-                          </h3>
-                          <p class="text">
-                            Tap into our extensive network of content creators
-                            across Canada to build brand trust and reach highly
-                            targeted local audiences.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="right"
-                        data-delay="0.60"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-24.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Digital Billboards <br />
-                            Across North America
-                          </h3>
-                          <p class="text">
-                            Promote your business with high-impact billboard
-                            placements in major cities across the USA and Canada
-                            for maximum brand visibility.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.75"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-25.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Creative & <br />
-                            Data-Driven Strategies
-                          </h3>
-                          <p class="text">
-                            We combine stunning design with robust performance
-                            metrics to build marketing campaigns that deliver
-                            high conversion rates.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="right"
-                        data-delay="0.90"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-26.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Transparent <br />
-                            Communication
-                          </h3>
-                          <p class="text">
-                            Stay fully informed with clear timelines, regular
-                            reporting, and dedicated account support throughout
-                            your project lifecycle.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="feature-box has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="1.05"
-                      >
-                        <div class="thumb">
-                          <img
-                            src="assets/imgs/icon/icon-s-24.webp"
-                            alt="feature icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h3 class="title">
-                            Results-Focused <br />
-                            Approach
-                          </h3>
-                          <p class="text">
-                            We align all design, development, and advertising
-                            efforts directly with your key growth goals and
-                            performance metrics.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- feature area end  -->
-
-            <!-- eterprise area start  -->
-            <div class="enterprise-area">
-              <div class="container">
-                <div class="enterprise-area-inner section-spacing">
-                  <div class="section-header">
-                    <div class="text-wrapper">
-                      <p class="text has_text_move_anim">
-                        Our Technology Expertise includes
-                      </p>
-                    </div>
-                  </div>
-                  <div class="expertise-wrapper-box">
-                    <div class="expertise-wrapper">
-                      <div
-                        class="expertise-box has_fade_anim"
-                        data-fade-from="right"
-                      >
-                        <div class="icon">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/icon-s-31.webp"
-                            alt="icon"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/icon/icon-s-31-light.webp"
-                            alt="icon"
-                          />
-                        </div>
-                        <p class="name">WordPress</p>
-                      </div>
-                      <div
-                        class="expertise-box has_fade_anim"
-                        data-fade-from="right"
-                      >
-                        <div class="icon">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/icon-s-32.webp"
-                            alt="icon"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/icon/icon-s-32-light.webp"
-                            alt="icon"
-                          />
-                        </div>
-                        <p class="name">React.js</p>
-                      </div>
-                      <div
-                        class="expertise-box has_fade_anim"
-                        data-fade-from="right"
-                      >
-                        <div class="icon">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/icon-s-33.webp"
-                            alt="icon"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/icon/icon-s-33-light.webp"
-                            alt="icon"
-                          />
-                        </div>
-                        <p class="name">Node.js</p>
-                      </div>
-                      <div
-                        class="expertise-box has_fade_anim"
-                        data-fade-from="left"
-                      >
-                        <div class="icon">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/icon-s-34.webp"
-                            alt="icon"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/icon/icon-s-34-light.webp"
-                            alt="icon"
-                          />
-                        </div>
-                        <p class="name">Flutter</p>
-                      </div>
-                      <div
-                        class="expertise-box has_fade_anim"
-                        data-fade-from="left"
-                      >
-                        <div class="icon">
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/icon-s-35.webp"
-                            alt="icon"
-                          />
-                          <img
-                            class="show-dark"
-                            src="assets/imgs/icon/icon-s-35-light.webp"
-                            alt="icon"
-                          />
-                        </div>
-                        <p class="name">Redux</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- eterprise area end  -->
-
-            <!-- packages area start  -->
-            <section class="packages-area section-spacing" id="packages">
-              <div class="container">
-                <div class="section-header text-center mb-60">
-                  <div class="section-title-wrapper justify-content-center">
-                    <h2 class="section-title text-center">
-                      Business Launch <span>Packages</span>
-                    </h2>
-                  </div>
-                  <p class="text max-width-600 mx-auto mt-20">
-                    Whether you’re launching a new business or growing an
-                    existing brand, our packages provide everything you need to
-                    stand out.
-                  </p>
-                </div>
-
-                <!-- Tier 1: Starter, Growth, Premium -->
-                <div class="row g-4 justify-content-center mb-5">
-                  <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card">
-                      <div>
-                        <h3 class="package-name">Starter</h3>
-                        <p class="text-muted mb-3">
-                          Perfect for startups and small businesses establishing
-                          their online presence.
-                        </p>
-                        <div class="package-price">Request Pricing</div>
-                        <ul class="package-features">
-                          <li>
-                            <i class="fa-solid fa-check"></i> Website Dev (Up to
-                            5 Pages)
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Mobile Responsive
-                            Design
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Contact Form
-                            Integration
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Google Maps
-                            Integration
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Basic SEO Setup
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Custom Logo Design
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Business Card &
-                            Letterhead
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> 1 Month Free
-                            Support
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="#contact" class="btn-pricing">Get Started</a>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card popular">
-                      <div>
-                        <span class="badge-popular">Most Popular</span>
-                        <h3 class="package-name">Growth</h3>
-                        <p class="text-muted mb-3">
-                          Designed for businesses looking to expand online and
-                          strengthen brand identity.
-                        </p>
-                        <div class="package-price">Request Pricing</div>
-                        <ul class="package-features">
-                          <li>
-                            <i class="fa-solid fa-check"></i> Website Dev (Up to
-                            10 Pages)
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Custom Website
-                            Design
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Lead Generation
-                            Forms
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Advanced SEO Setup
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Google Analytics
-                            Integration
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Speed Optimization
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Complete Brand
-                            Identity
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Social Media
-                            Profile Branding
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> 1 Month Free
-                            Support
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="#contact" class="btn-pricing">Get Started</a>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card">
-                      <div>
-                        <h3 class="package-name">Premium</h3>
-                        <p class="text-muted mb-3">
-                          A complete custom branding and web solution for
-                          established companies.
-                        </p>
-                        <div class="package-price">Request Pricing</div>
-                        <ul class="package-features">
-                          <li>
-                            <i class="fa-solid fa-check"></i> Premium Custom
-                            Website
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Up to 20 Website
-                            Pages
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Custom UI/UX
-                            Design
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Conversion-Focused
-                            Layouts
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Blog Integration
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Advanced SEO
-                            Foundation
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Speed & Perf
-                            Optimization
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Social Media &
-                            Marketing Kit
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> 1 Month Free
-                            Support
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="#contact" class="btn-pricing">Get Started</a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Tier 2: E-Commerce & Custom Dev -->
-                <div class="row g-4 justify-content-center">
-                  <div class="col-md-6">
-                    <div class="pricing-card">
-                      <div>
-                        <h3 class="package-name">E-Commerce</h3>
-                        <p class="text-muted mb-3">
-                          Launch and grow your professional online store with
-                          checkout solutions.
-                        </p>
-                        <div class="package-price">Request Pricing</div>
-                        <ul class="package-features">
-                          <li>
-                            <i class="fa-solid fa-check"></i> E-Commerce Website
-                            Dev
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Product Management
-                            System
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Secure Payment
-                            Gateway
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Shipping
-                            Configuration
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> SEO-Friendly
-                            Structure
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Professional Logo
-                            Design
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Product Category
-                            Setup
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Store Management
-                            Training
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> 1 Month Free
-                            Support
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="#contact" class="btn-pricing">Get Started</a>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="pricing-card">
-                      <div>
-                        <h3 class="package-name">Custom Solutions</h3>
-                        <p class="text-muted mb-3">
-                          Need something beyond? Custom digital applications
-                          tailored to your business needs.
-                        </p>
-                        <div class="package-price">Custom Proposal</div>
-                        <ul class="package-features">
-                          <li>
-                            <i class="fa-solid fa-check"></i> Custom Web
-                            Application Dev
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Android & iOS App
-                            Development
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> SaaS Platform
-                            Development
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Booking Systems &
-                            CRM Tools
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> Business
-                            Automation Tools
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> API Integrations &
-                            Webhooks
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i> 1 Month Free
-                            Support
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="#contact" class="btn-pricing">Get Started</a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- What's Included With Every Project -->
-                <div
-                  class="project-inclusions-box mt-80 pt-60 border-top-custom"
-                >
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="inclusion-header has_fade_anim">
-                        <h3
-                          class="inclusion-title font-heading-teko-bold"
-                          style="font-size: 32px; text-transform: uppercase"
-                        >
-                          What's Included <br />With Every Project
-                        </h3>
-                        <p class="text mt-15">
-                          Every Renova project is built with quality,
-                          performance, and long-term success in mind.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div class="inclusions-grid">
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.1"
-                        >
-                          <i class="fa-solid fa-circle-check"></i>
-                          Mobile-Friendly Design
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.15"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> SEO-Friendly
-                          Structure
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.2"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Fast Loading
-                          Performance
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.25"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Secure
-                          Website Setup
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.3"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Professional
-                          Branding Assets
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.35"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Dedicated
-                          Project Manager
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.4"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Transparent
-                          Communication
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.45"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> Quality
-                          Assurance Testing
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.5"
-                        >
-                          <i class="fa-solid fa-circle-check"></i>
-                          Growth-Focused Strategy
-                        </div>
-                        <div
-                          class="inclusion-item has_fade_anim"
-                          data-delay="0.55"
-                        >
-                          <i class="fa-solid fa-circle-check"></i> 1 Month Free
-                          Support
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- work area end  -->
 
             <!-- service area start  -->
             <section class="service-area" id="services">
@@ -2057,267 +1290,752 @@
                         </a>
                       </div>
 
-                      <!-- 08. Product Photography -->
-                      <div class="has_fade_anim" data-delay="0.45">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">08.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Product <br />
-                                Photography
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Professional product photography for
-                                  e-commerce, social media, websites, catalogs,
-                                  and advertising campaigns.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ E-Commerce Photography</li>
-                                    <li>+ Social Media Content</li>
-                                    <li>+ Catalogue Shoots</li>
-                                    <li>+ Advertising Campaigns</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-36.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-36-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
+                      
 
-                      <!-- 09. Brand & Corporate Photography -->
-                      <div class="has_fade_anim" data-delay="0.50">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">09.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Brand & Corporate <br />
-                                Photography
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Professional photography services including
-                                  team photos, corporate headshots, office
-                                  shoots, and brand storytelling content.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ Team Photos</li>
-                                    <li>+ Corporate Headshots</li>
-                                    <li>+ Office Shoots</li>
-                                    <li>+ Brand Storytelling Content</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-36.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-36-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
+                      
 
-                      <!-- 10. Video Production & Content Creation -->
-                      <div class="has_fade_anim" data-delay="0.55">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">10.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Video Production & <br />
-                                Content Creation
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Create engaging content that drives attention
-                                  and customer engagement.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ Promotional Videos</li>
-                                    <li>+ Social Media Reels</li>
-                                    <li>+ Product Videos</li>
-                                    <li>+ Corporate Videos</li>
-                                    <li>+ Advertising Content</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-37.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-37-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- 11. Influencer Marketing -->
-                      <div class="has_fade_anim" data-delay="0.60">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">11.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Influencer <br />
-                                Marketing
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Leverage our network of influencers across
-                                  Canada to increase brand awareness and reach
-                                  highly targeted audiences.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ Influencer Outreach</li>
-                                    <li>+ Campaign Management</li>
-                                    <li>+ Sponsored Content</li>
-                                    <li>+ Product Promotions</li>
-                                    <li>+ Performance Tracking</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-38.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-38-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- 12. Digital Billboard Advertising -->
-                      <div class="has_fade_anim" data-delay="0.65">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">12.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Digital Billboard <br />
-                                Advertising
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Promote your business through premium digital
-                                  billboard placements across major cities in
-                                  the United States and Canada.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ Ideal for Restaurants</li>
-                                    <li>+ Ideal for Retail Stores</li>
-                                    <li>
-                                      + Ideal for Real Estate Professionals
-                                    </li>
-                                    <li>+ Ideal for Events & Healthcare</li>
-                                    <li>+ Ideal for Local Businesses</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-39.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-39-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- 13. Marketing Strategy & Consulting -->
-                      <div class="has_fade_anim" data-delay="0.70">
-                        <a href="#contact">
-                          <div class="service-box">
-                            <span class="number">13.</span>
-                            <div class="content">
-                              <h3 class="title">
-                                Marketing Strategy & <br />
-                                Consulting
-                              </h3>
-                              <div class="content-last">
-                                <p class="text">
-                                  Expert guidance to help businesses grow faster
-                                  and market smarter.
-                                </p>
-                                <div class="feature-list">
-                                  <ul>
-                                    <li>+ Growth Strategy</li>
-                                    <li>+ Lead Generation Planning</li>
-                                    <li>+ Brand Positioning</li>
-                                    <li>+ Customer Acquisition</li>
-                                    <li>+ Marketing Audits</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="icon">
-                              <img
-                                class="show-light"
-                                src="assets/imgs/icon/icon-s-36.webp"
-                                alt="icon"
-                              />
-                              <img
-                                class="show-dark"
-                                src="assets/imgs/icon/icon-s-36-light.webp"
-                                alt="icon"
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
               </div>
             </section>
             <!-- service area end  -->
+            <!-- eterprise area start  -->
+            <div class="enterprise-area">
+              <div class="container">
+                <div class="enterprise-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="text-wrapper">
+                      <p class="text has_text_move_anim">
+                        Our Technology Expertise includes
+                      </p>
+                    </div>
+                  </div>
+                  <div class="expertise-wrapper-box">
+                    <div class="expertise-wrapper">
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-31.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-31-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">WordPress</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-32.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-32-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">React.js</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-33.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-33-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Node.js</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="left"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-34.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-34-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Flutter</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="left"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-35.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-35-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Redux</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- eterprise area end  -->
+
+            <!-- packages area start  -->
+            <section class="packages-area section-spacing" id="packages">
+              <div class="container">
+                <div class="section-header text-center mb-60">
+                  <div class="section-title-wrapper justify-content-center">
+                    <h2 class="section-title text-center">
+                      Business Launch <span>Packages</span>
+                    </h2>
+                  </div>
+                  <p class="text max-width-600 mx-auto mt-20">
+                    Whether you’re launching a new business or growing an
+                    existing brand, our packages provide everything you need to
+                    stand out.
+                  </p>
+                </div>
+
+                <!-- Tier 1: Starter, Growth, Premium -->
+                <div class="row g-4 justify-content-center mb-5">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                      <div>
+                        <h3 class="package-name">Starter</h3>
+                        <p class="text-muted mb-3">
+                          Perfect for startups and small businesses establishing
+                          their online presence.
+                        </p>
+                        <div class="package-price">Request Pricing</div>
+                        <ul class="package-features">
+                          <li>
+                            <i class="fa-solid fa-check"></i> Website Dev (Up to
+                            5 Pages)
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Mobile Responsive
+                            Design
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Contact Form
+                            Integration
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Google Maps
+                            Integration
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Basic SEO Setup
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Custom Logo Design
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Business Card &
+                            Letterhead
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> 1 Month Free
+                            Support
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card popular">
+                      <div>
+                        <span class="badge-popular">Most Popular</span>
+                        <h3 class="package-name">Growth</h3>
+                        <p class="text-muted mb-3">
+                          Designed for businesses looking to expand online and
+                          strengthen brand identity.
+                        </p>
+                        <div class="package-price">Request Pricing</div>
+                        <ul class="package-features">
+                          <li>
+                            <i class="fa-solid fa-check"></i> Website Dev (Up to
+                            10 Pages)
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Custom Website
+                            Design
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Lead Generation
+                            Forms
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Advanced SEO Setup
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Google Analytics
+                            Integration
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Speed Optimization
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Complete Brand
+                            Identity
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Social Media
+                            Profile Branding
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> 1 Month Free
+                            Support
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                      <div>
+                        <h3 class="package-name">Premium</h3>
+                        <p class="text-muted mb-3">
+                          A complete custom branding and web solution for
+                          established companies.
+                        </p>
+                        <div class="package-price">Request Pricing</div>
+                        <ul class="package-features">
+                          <li>
+                            <i class="fa-solid fa-check"></i> Premium Custom
+                            Website
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Up to 20 Website
+                            Pages
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Custom UI/UX
+                            Design
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Conversion-Focused
+                            Layouts
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Blog Integration
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Advanced SEO
+                            Foundation
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Speed & Perf
+                            Optimization
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Social Media &
+                            Marketing Kit
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> 1 Month Free
+                            Support
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tier 2: E-Commerce & Custom Dev -->
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6">
+                    <div class="pricing-card">
+                      <div>
+                        <h3 class="package-name">E-Commerce</h3>
+                        <p class="text-muted mb-3">
+                          Launch and grow your professional online store with
+                          checkout solutions.
+                        </p>
+                        <div class="package-price">Request Pricing</div>
+                        <ul class="package-features">
+                          <li>
+                            <i class="fa-solid fa-check"></i> E-Commerce Website
+                            Dev
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Product Management
+                            System
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Secure Payment
+                            Gateway
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Shipping
+                            Configuration
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> SEO-Friendly
+                            Structure
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Professional Logo
+                            Design
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Product Category
+                            Setup
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Store Management
+                            Training
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> 1 Month Free
+                            Support
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="pricing-card">
+                      <div>
+                        <h3 class="package-name">Custom Solutions</h3>
+                        <p class="text-muted mb-3">
+                          Need something beyond? Custom digital applications
+                          tailored to your business needs.
+                        </p>
+                        <div class="package-price">Custom Proposal</div>
+                        <ul class="package-features">
+                          <li>
+                            <i class="fa-solid fa-check"></i> Custom Web
+                            Application Dev
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Android & iOS App
+                            Development
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> SaaS Platform
+                            Development
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Booking Systems &
+                            CRM Tools
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> Business
+                            Automation Tools
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> API Integrations &
+                            Webhooks
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-check"></i> 1 Month Free
+                            Support
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- What's Included With Every Project -->
+                <div
+                  class="project-inclusions-box mt-80 pt-60 border-top-custom"
+                >
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="inclusion-header has_fade_anim">
+                        <h3
+                          class="inclusion-title font-heading-teko-bold"
+                          style="font-size: 32px; text-transform: uppercase"
+                        >
+                          What's Included <br />With Every Project
+                        </h3>
+                        <p class="text mt-15">
+                          Every Renova project is built with quality,
+                          performance, and long-term success in mind.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="inclusions-grid">
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.1"
+                        >
+                          <i class="fa-solid fa-circle-check"></i>
+                          Mobile-Friendly Design
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.15"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> SEO-Friendly
+                          Structure
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.2"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Fast Loading
+                          Performance
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.25"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Secure
+                          Website Setup
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.3"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Professional
+                          Branding Assets
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.35"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Dedicated
+                          Project Manager
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.4"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Transparent
+                          Communication
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.45"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> Quality
+                          Assurance Testing
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.5"
+                        >
+                          <i class="fa-solid fa-circle-check"></i>
+                          Growth-Focused Strategy
+                        </div>
+                        <div
+                          class="inclusion-item has_fade_anim"
+                          data-delay="0.55"
+                        >
+                          <i class="fa-solid fa-circle-check"></i> 1 Month Free
+                          Support
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- work area end  -->
+
+                        <!-- portfolio area start -->
+            <section class="work-area" id="portfolio">
+              <div class="container-hd">
+                <div class="work-area-inner section-spacing">
+                  <div class="container">
+                    <div class="section-header text-center mb-60">
+                      <div class="section-title-wrapper justify-content-center">
+                        <h2 class="section-title text-center">Our <span>Portfolio</span></h2>
+                      </div>
+                      <p class="text max-width-600 mx-auto mt-20">
+                        Explore some of our recent marketing, technology, and branding projects that have helped businesses grow.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="works-wrapper-box mt-60">
+                    <div class="swiper work-slider-active">
+                      <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-1.webp" alt="Work 1" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">E-Commerce Brand</h3>
+                              <span class="meta">Web Development</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-2.webp" alt="Work 2" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">SaaS Platform</h3>
+                              <span class="meta">Web Application</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-3.webp" alt="Work 3" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">Renova Mobile App</h3>
+                              <span class="meta">iOS & Android App</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-4.webp" alt="Work 4" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">Corporate Branding</h3>
+                              <span class="meta">Branding & Logo Design</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-5.webp" alt="Work 5" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">SEO Rank Booster</h3>
+                              <span class="meta">Search Engine Optimization</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                          <div class="work-box">
+                            <img src="assets/imgs/works/img-s-6.webp" alt="Work 6" />
+                            <div class="content">
+                              <div class="icon">
+                                <a href="#contact">
+                                  <img class="show-light" src="assets/imgs/icon/arrow-right-half.webp" alt="arrow" />
+                                  <img class="show-dark" src="assets/imgs/icon/arrow-right-half-light.webp" alt="arrow" />
+                                </a>
+                              </div>
+                              <h3 class="title">Social Campaign</h3>
+                              <span class="meta">Social Media Marketing</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- portfolio area end -->
+<!-- about area start  -->
+            <section class="about-area" id="about">
+              <div class="container">
+                <div class="about-area-inner section-spacing">
+                  <div class="shape-1 has_fade_anim" data-fade-offset="0">
+                    <img
+                      class="show-light"
+                      src="assets/imgs/shape/img-s-66.webp"
+                      alt="image"
+                    />
+                    <img
+                      class="show-dark"
+                      src="assets/imgs/shape/img-s-66-light.webp"
+                      alt="image"
+                    />
+                  </div>
+                  <div class="section-content">
+                    <div class="section-title-wrapper">
+                      <div class="subtitle-wrapper">
+                        <span class="section-subtitle has_fade_anim"
+                          >01. Who we are</span
+                        >
+                      </div>
+                      <div class="title-wrapper has_fade_anim">
+                        <h2 class="section-title">
+                          Grow your business with
+                          <span>creative design</span> & strategic marketing!
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="content-bottom">
+                      <div
+                        class="clients-wrapper has_fade_anim"
+                        data-fade-from="left"
+                      >
+                        <div class="thumb">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/client/img-s-4.webp"
+                            alt="image"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/client/img-s-4-dark.webp"
+                            alt="image"
+                          />
+                        </div>
+                        <div class="info">
+                          <h3 class="number">100%</h3>
+                          <p class="text">dedicated & results-focused</p>
+                        </div>
+                      </div>
+                      <div class="info-wrapper">
+                        <div class="text-wrapper">
+                          <p class="text has_fade_anim">
+                            At Renova Marketing Solutions, we combine
+                            creativity, technology, and strategic marketing to
+                            help businesses succeed in a competitive digital
+                            landscape. Our mission is to provide businesses with
+                            innovative solutions that increase visibility,
+                            generate leads, improve customer engagement, and
+                            accelerate growth. Whether you're a startup, small
+                            business, or established company, we create
+                            customized strategies designed around your goals.
+                          </p>
+                        </div>
+                        <div
+                          class="btn-wrapper has_fade_anim"
+                          data-fade-from="top"
+                          data-fade-offset="100"
+                          data-ease="bounce"
+                        >
+                          <div class="btn-wrapper btn-move">
+                            <a
+                              href="#services"
+                              class="wc-btn wc-btn-circle btn-hover-bgchange btn-item"
+                              >Explore
+                              <br />
+                              Services</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-gallery-wrapper">
+                    <div class="thumb-1 has_fade_anim">
+                      <img
+                        src="assets/imgs/gallery/img-s-70.webp"
+                        alt="image"
+                      />
+                    </div>
+                    <div class="thumb-2">
+                      <img
+                        src="assets/imgs/gallery/img-s-71.webp"
+                        class="has_fade_anim"
+                        data-fade-from="right"
+                        data-fade-offset="50"
+                        data-delay="0.45"
+                        alt="image"
+                      />
+                      <div
+                        class="about-service-box has_fade_anim"
+                        data-fade-from="top"
+                        data-fade-offset="0"
+                        data-delay="0.90"
+                      >
+                        <div class="thumb">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/shape/img-s-67.webp"
+                            alt="image"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/shape/img-s-67-light.webp"
+                            alt="image"
+                          />
+                        </div>
+                        <p class="text">
+                          Make your business prosper with our expert team. We
+                          deliver custom solutions tailored specifically to your
+                          business goals.
+                        </p>
+                        <div class="counts">
+                          <span class="number">1.8</span
+                          ><span class="x">x</span>
+                          <span class="text">Faster Service</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- about area end  -->
+
             <!-- testimonial area start  -->
             <section class="testimonial-area">
               <div class="container">
@@ -2485,171 +2203,6 @@
             </section>
             <!-- testimonial area end  -->
 
-            <!-- faq area start  -->
-            <section class="faq-area" id="faq">
-              <div class="container">
-                <div class="faq-area-inner section-spacing">
-                  <div class="section-content">
-                    <div class="section-title-wrapper">
-                      <div class="title-wrapper">
-                        <h2 class="section-title has_text_move_anim">
-                          frequently asked questions
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="text-wrapper">
-                      <p class="text has_fade_anim">
-                        Frequently asked questions about our marketing and
-                        technology solutions.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="accordion-wrapper has_fade_anim"
-                    data-delay="0.45"
-                  >
-                    <div
-                      class="accordion accordion-flush"
-                      id="accordionFlushExample"
-                    >
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                          >
-                            How long does a website take?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseOne"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="flush-headingOne"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div class="accordion-body">
-                            Most websites are completed within 2–6 weeks,
-                            depending on the complexity of the design and
-                            features required.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseTwo"
-                          >
-                            Do you develop mobile apps?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseTwo"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="flush-headingTwo"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div class="accordion-body">
-                            Yes, we develop both Android and iOS applications
-                            tailored to your specific business ideas, from UI/UX
-                            design to App Store and Google Play deployment.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseThree"
-                          >
-                            Do you build custom web applications?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseThree"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="flush-headingThree"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div class="accordion-body">
-                            Yes, we build custom web applications including
-                            customer portals, business dashboards, SaaS
-                            platforms, booking systems, and custom API
-                            integrations.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseFour"
-                          >
-                            Do you provide influencer marketing?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseFour"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="flush-headingFour"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div class="accordion-body">
-                            Yes, we leverage our extensive network of
-                            influencers across Canada to increase brand
-                            awareness and reach targeted audiences.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFive">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFive"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseFive"
-                          >
-                            Do you offer billboard advertising?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseFive"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="flush-headingFive"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div class="accordion-body">
-                            Yes, we offer premium digital billboard placements
-                            across selected locations in major cities across
-                            both the United States and Canada.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- faq area end  -->
-
             <!-- contact area start  -->
             <!-- contact area start  -->
             <section class="contact-area" id="contact">
@@ -2741,137 +2294,6 @@
             </section>
             <!-- contact area end  -->
 
-            <!-- blog area start  -->
-            <section class="blog-area" id="blog">
-              <div class="container">
-                <div class="blog-area-inner section-spacing">
-                  <div class="section-header">
-                    <div class="section-title-wrapper">
-                      <div class="title-wrapper">
-                        <h2 class="section-title has_text_move_anim">
-                          Our Latest Insights
-                        </h2>
-                      </div>
-                    </div>
-                    <div
-                      class="content-last has_fade_anim"
-                      data-fade-from="right"
-                      data-delay="0.45"
-                    >
-                      <div class="text-wrapper">
-                        <p class="text">
-                          Stay ahead of the curve with our expert articles on
-                          technology, design, and growth marketing.
-                        </p>
-                      </div>
-                      <div class="btn-wrapper">
-                        <a
-                          href="#contact"
-                          class="wc-btn wc-btn-underline btn-text-flip"
-                        >
-                          <span data-text="All blog">All blog</span>
-                          <img
-                            class="show-light"
-                            src="assets/imgs/icon/arrow-right-half.webp"
-                            alt="icon image" /><img
-                            class="show-dark"
-                            src="assets/imgs/icon/arrow-right-half-light.webp"
-                            alt="icon image"
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="blogs-wrapper-box">
-                    <div class="blogs-wrapper">
-                      <div
-                        class="has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.15"
-                      >
-                        <a href="#contact">
-                          <article class="blog">
-                            <h2 class="title text-underline">
-                              Attracting exceptional tech talent to your team
-                            </h2>
-                            <div class="thumb">
-                              <img
-                                src="assets/imgs/blog/img-s-12.webp"
-                                alt="blog image"
-                              />
-                            </div>
-                            <p class="text">
-                              How to recruit, engage, and retain top engineering
-                              and creative talent in a remote-first landscape...
-                            </p>
-                            <div class="meta-list">
-                              <h3 class="name">Oliver Kugar</h3>
-                              <span class="meta">jQuery, Ajax - 01 nov</span>
-                            </div>
-                          </article>
-                        </a>
-                      </div>
-                      <div
-                        class="has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.30"
-                      >
-                        <a href="#contact">
-                          <article class="blog">
-                            <h2 class="title text-underline">
-                              Choosing the best agency and development tools
-                            </h2>
-                            <div class="thumb">
-                              <img
-                                src="assets/imgs/blog/img-s-13.webp"
-                                alt="blog image"
-                              />
-                            </div>
-                            <p class="text">
-                              A comparative guide of modern web development and
-                              digital advertising toolkits for growth...
-                            </p>
-                            <div class="meta-list">
-                              <h3 class="name">Tuya Terekh</h3>
-                              <span class="meta">jQuery, Ajax - 01 nov</span>
-                            </div>
-                          </article>
-                        </a>
-                      </div>
-                      <div
-                        class="has_fade_anim"
-                        data-fade-from="left"
-                        data-delay="0.45"
-                      >
-                        <a href="#contact">
-                          <article class="blog">
-                            <h2 class="title text-underline">
-                              Where talent meets opportunity in the tech space
-                            </h2>
-                            <div class="thumb">
-                              <img
-                                src="assets/imgs/blog/img-s-14.webp"
-                                alt="blog image"
-                              />
-                            </div>
-                            <p class="text">
-                              Strategic insights on building synergy between
-                              creative marketing campaigns and scalable web
-                              architectures...
-                            </p>
-                            <div class="meta-list">
-                              <h3 class="name">Oliver Kugar</h3>
-                              <span class="meta">jQuery, Ajax - 01 nov</span>
-                            </div>
-                          </article>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- blog area end  -->
-
             <!-- cta area start  -->
             <section class="cta-area">
               <div class="container">
@@ -2926,9 +2348,11 @@
                 </div>
                 <ul class="footer-nav-list">
                   <li><a href="#hero">Home</a></li>
-                  <li><a href="#about">About</a></li>
                   <li><a href="#services">Services</a></li>
                   <li><a href="#packages">Packages</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
                 <ul class="social-links">
                   <li>
