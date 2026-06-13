@@ -464,10 +464,15 @@
       body.dark .work-box .meta {
         color: #999 !important;
       }
-    
+
       /* Contact Section Redesign */
       .gold-gradient-text {
-        background: linear-gradient(135deg, #F1D48F 0%, #C5A059 50%, #846226 100%) !important;
+        background: linear-gradient(
+          135deg,
+          #f1d48f 0%,
+          #c5a059 50%,
+          #846226 100%
+        ) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         background-clip: text !important;
@@ -502,7 +507,12 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #F1D48F 0%, #C5A059 50%, #846226 100%);
+        background: linear-gradient(
+          135deg,
+          #f1d48f 0%,
+          #c5a059 50%,
+          #846226 100%
+        );
         display: flex;
         align-items: center;
         justify-content: center;
@@ -562,12 +572,22 @@
         box-shadow: 0 0 12px rgba(197, 160, 89, 0.2) !important;
       }
       body.dark .contact-form-wrapper {
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(197, 160, 89, 0.03);
+        box-shadow:
+          0 15px 40px rgba(0, 0, 0, 0.5),
+          0 0 30px rgba(197, 160, 89, 0.03);
       }
-</style>
+    </style>
   </head>
 
   <body class="font-heading-teko-bold">
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.body.classList.add('dark');
+        }
+      })();
+    </script>
     <!-- Preloader -->
     <div id="preloader">
       <div id="container" class="container-preloader">
@@ -701,7 +721,7 @@
               <li><a href="#packages">packages</a></li>
               <li><a href="#portfolio">portfolio</a></li>
               <li><a href="#about">about</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li><a href="contact.html">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -779,12 +799,12 @@
                 <li><a href="#packages">packages</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
                 <li><a href="#about">about</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="contact.html">contact</a></li>
               </ul>
             </nav>
           </div>
           <div class="header__button">
-            <a href="#contact" class="wc-btn wc-btn-primary btn-text-flip">
+            <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip">
               <span data-text="Request Pricing">Request Pricing</span></a
             >
           </div>
@@ -885,7 +905,7 @@
                         </div>
                         <div class="btn-wrapper has_fade_anim">
                           <a
-                            href="#contact"
+                            href="contact.html"
                             class="wc-btn wc-btn-underline btn-text-flip"
                           >
                             <span data-text="request pricing"
@@ -1089,7 +1109,7 @@
                     <div class="services-wrapper">
                       <!-- 01. Website Design & Development -->
                       <div class="has_fade_anim" data-delay="0.10">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">01.</span>
                             <div class="content">
@@ -1133,7 +1153,7 @@
 
                       <!-- 02. Web Application Development -->
                       <div class="has_fade_anim" data-delay="0.15">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">02.</span>
                             <div class="content">
@@ -1177,7 +1197,7 @@
 
                       <!-- 03. Android App Development -->
                       <div class="has_fade_anim" data-delay="0.20">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">03.</span>
                             <div class="content">
@@ -1219,7 +1239,7 @@
 
                       <!-- 04. iOS App Development -->
                       <div class="has_fade_anim" data-delay="0.25">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">04.</span>
                             <div class="content">
@@ -1261,7 +1281,7 @@
 
                       <!-- 05. SEO Services -->
                       <div class="has_fade_anim" data-delay="0.30">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">05.</span>
                             <div class="content">
@@ -1305,7 +1325,7 @@
 
                       <!-- 06. Graphic Design & Branding -->
                       <div class="has_fade_anim" data-delay="0.35">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">06.</span>
                             <div class="content">
@@ -1348,7 +1368,7 @@
 
                       <!-- 07. Social Media Marketing -->
                       <div class="has_fade_anim" data-delay="0.40">
-                        <a href="#contact">
+                        <a href="contact.html">
                           <div class="service-box">
                             <span class="number">07.</span>
                             <div class="content">
@@ -1565,7 +1585,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                      <a href="contact.html" class="btn-pricing">Request Pricing</a>
                     </div>
                   </div>
 
@@ -1616,7 +1636,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                      <a href="contact.html" class="btn-pricing">Request Pricing</a>
                     </div>
                   </div>
 
@@ -1667,7 +1687,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                      <a href="contact.html" class="btn-pricing">Request Pricing</a>
                     </div>
                   </div>
                 </div>
@@ -1722,7 +1742,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                      <a href="contact.html" class="btn-pricing">Request Pricing</a>
                     </div>
                   </div>
 
@@ -1766,7 +1786,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="#contact" class="btn-pricing">Request Pricing</a>
+                      <a href="contact.html" class="btn-pricing">Request Pricing</a>
                     </div>
                   </div>
                 </div>
@@ -1900,7 +1920,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -1927,7 +1947,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -1954,7 +1974,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -1981,7 +2001,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -2008,7 +2028,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -2037,7 +2057,7 @@
                             />
                             <div class="content">
                               <div class="icon">
-                                <a href="#contact">
+                                <a href="contact.html">
                                   <img
                                     class="show-light"
                                     src="assets/imgs/icon/arrow-right-half.webp"
@@ -2379,17 +2399,26 @@
                             <span class="section-subtitle">Get in Touch</span>
                           </div>
                           <div class="title-wrapper">
-                            <h2 class="section-title" style="font-size: 60px; line-height: 1.1;">
-                              Ready to grow <br><span class="gold-gradient-text">your business?</span>
+                            <h2
+                              class="section-title"
+                              style="font-size: 60px; line-height: 1.1"
+                            >
+                              Ready to grow <br /><span
+                                class="gold-gradient-text"
+                                >your business?</span
+                              >
                             </h2>
                           </div>
                         </div>
                         <div class="text-wrapper mt-30">
                           <p class="text">
-                            Contact Renova Marketing Solutions today and discover how our marketing, technology, and branding solutions can help your business achieve sustainable growth.
+                            Contact Renova Marketing Solutions today and
+                            discover how our marketing, technology, and branding
+                            solutions can help your business achieve sustainable
+                            growth.
                           </p>
                         </div>
-                        
+
                         <div class="contact-cards-grid mt-40">
                           <!-- Card 1: Email -->
                           <div class="contact-card">
@@ -2398,7 +2427,11 @@
                             </div>
                             <div class="card-content">
                               <h4 class="card-title">Email Us</h4>
-                              <a href="mailto:hello@renovamarketing.com" class="card-link">hello@renovamarketing.com</a>
+                              <a
+                                href="mailto:hello@renovamarketing.com"
+                                class="card-link"
+                                >hello@renovamarketing.com</a
+                              >
                             </div>
                           </div>
                           <!-- Card 2: Website -->
@@ -2408,7 +2441,9 @@
                             </div>
                             <div class="card-content">
                               <h4 class="card-title">Our Website</h4>
-                              <span class="card-text">www.renovamarketing.com</span>
+                              <span class="card-text"
+                                >www.renovamarketing.com</span
+                              >
                             </div>
                           </div>
                           <!-- Card 3: Locations -->
@@ -2418,7 +2453,10 @@
                             </div>
                             <div class="card-content">
                               <h4 class="card-title">Locations</h4>
-                              <span class="card-text">Toronto, ON, Canada <br> New York, NY, USA</span>
+                              <span class="card-text"
+                                >Toronto, ON, Canada <br />
+                                New York, NY, USA</span
+                              >
                             </div>
                           </div>
                         </div>
@@ -2613,6 +2651,25 @@
           },
         );
       }
+    </script>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          var darkBtn = document.querySelector('.mode-type button[data-mode="dark"]');
+          var lightBtn = document.querySelector('.mode-type button[data-mode="light"]');
+          if (darkBtn && lightBtn) {
+            darkBtn.classList.add('active');
+            lightBtn.classList.remove('active');
+          }
+        }
+        document.querySelectorAll('.mode-type button').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var mode = this.getAttribute('data-mode');
+            localStorage.setItem('theme', mode);
+          });
+        });
+      })();
     </script>
   </body>
 </html>
