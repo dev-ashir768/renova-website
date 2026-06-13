@@ -820,6 +820,27 @@
       body:not(.dark) .form-control-custom::placeholder {
         color: rgba(0, 0, 0, 0.4);
       }
+      select.form-control-custom {
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c5a059' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 20px center !important;
+        padding-right: 45px !important;
+      }
+      select.form-control-custom option {
+        background: #1a1a1a;
+        color: #fff;
+      }
+      body:not(.dark) select.form-control-custom option {
+        background: #fff;
+        color: #000;
+      }
+      select.form-control-custom.package-selected {
+        border-color: #c5a059 !important;
+        box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15) !important;
+      }
     </style>
   </head>
 
@@ -945,10 +966,10 @@
             <div class="offcanvas-3__social d-none d-md-block">
               <p class="title">Follow Us</p>
               <div class="offcanvas-3__social-links">
-                <a href="index.html"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="index.html"><i class="fa-brands fa-twitter"></i></a>
-                <a href="index.html"><i class="fa-brands fa-instagram"></i></a>
-                <a href="index.html"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -957,8 +978,8 @@
           <nav class="nav-menu offcanvas-3__menu">
             <ul>
               <li><a href="index.html#hero">home</a></li>
-              <li><a href="index.html#services">services</a></li>
-              <li><a href="index.html#packages">packages</a></li>
+              <li><a href="services.html">services</a></li>
+              <li><a href="packages.html">packages</a></li>
               <li><a href="index.html#portfolio">portfolio</a></li>
               <li><a href="index.html#about">about</a></li>
               <li><a href="contact.html">contact</a></li>
@@ -1035,8 +1056,8 @@
             <nav class="main-menu">
               <ul>
                 <li><a href="index.html#hero">home</a></li>
-                <li><a href="index.html#services">services</a></li>
-                <li><a href="index.html#packages">packages</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="packages.html">packages</a></li>
                 <li><a href="index.html#portfolio">portfolio</a></li>
                 <li><a href="index.html#about">about</a></li>
                 <li><a href="contact.html">contact</a></li>
@@ -1211,10 +1232,25 @@
                           <div class="form-group">
                             <input
                               type="text"
-                              name="subject"
+                              name="phone"
                               class="form-control-custom"
-                              placeholder="Subject"
+                              placeholder="Your Phone Number"
                             />
+                          </div>
+                          <div class="form-group">
+                            <select
+                              name="package"
+                              id="package-select"
+                              class="form-control-custom"
+                            >
+                              <option value="" disabled selected>Select a Package (Optional)</option>
+                              <option value="Starter">Starter Package</option>
+                              <option value="Growth">Growth Package</option>
+                              <option value="Premium">Premium Package</option>
+                              <option value="E-Commerce">E-Commerce Package</option>
+                              <option value="Custom Solutions">Custom Solutions Package</option>
+                              <option value="General Inquiry">General Inquiry</option>
+                            </select>
                           </div>
                           <div class="form-group">
                             <textarea
@@ -1395,6 +1431,27 @@
             localStorage.setItem("theme", mode);
           });
         });
+      })();
+    </script>
+    <script>
+      // Auto-select package from URL param e.g. contact.html?package=Growth
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var pkg = params.get("package");
+        if (pkg) {
+          // decode "Custom+Solutions" → "Custom Solutions"
+          pkg = pkg.replace(/\+/g, " ");
+          var select = document.getElementById("package-select");
+          if (select) {
+            for (var i = 0; i < select.options.length; i++) {
+              if (select.options[i].value === pkg) {
+                select.selectedIndex = i;
+                select.classList.add("package-selected");
+                break;
+              }
+            }
+          }
+        }
       })();
     </script>
   </body>
