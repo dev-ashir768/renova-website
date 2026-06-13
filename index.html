@@ -464,7 +464,107 @@
       body.dark .work-box .meta {
         color: #999 !important;
       }
-    </style>
+    
+      /* Contact Section Redesign */
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #F1D48F 0%, #C5A059 50%, #846226 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        display: inline-block;
+      }
+      .contact-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .contact-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+      body:not(.dark) .contact-card {
+        background: rgba(0, 0, 0, 0.02);
+        border-color: rgba(0, 0, 0, 0.06);
+      }
+      .contact-card:hover {
+        transform: translateX(10px);
+        border-color: #c5a059;
+        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.15);
+      }
+      .contact-card .card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #F1D48F 0%, #C5A059 50%, #846226 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #121212;
+        font-size: 20px;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+      .contact-card:hover .card-icon {
+        transform: rotate(15deg) scale(1.1);
+      }
+      .contact-card .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: left;
+      }
+      .contact-card .card-title {
+        font-family: var(--font_teko);
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0;
+        color: var(--primary);
+      }
+      .contact-card .card-text,
+      .contact-card .card-link {
+        font-size: 16px;
+        color: var(--secondary);
+        text-transform: none;
+        line-height: 1.4;
+      }
+      .contact-card .card-link {
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .contact-card .card-link:hover {
+        color: #c5a059;
+      }
+      .form-control-custom {
+        background: rgba(255, 255, 255, 0.02) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        color: inherit;
+        padding: 16px 20px !important;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+      body:not(.dark) .form-control-custom {
+        background: rgba(0, 0, 0, 0.015) !important;
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+      .form-control-custom:focus {
+        border-color: #c5a059 !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        box-shadow: 0 0 12px rgba(197, 160, 89, 0.2) !important;
+      }
+      body.dark .contact-form-wrapper {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(197, 160, 89, 0.03);
+      }
+</style>
   </head>
 
   <body class="font-heading-teko-bold">
@@ -2275,36 +2375,53 @@
                     <div class="col-lg-6 has_fade_anim" data-fade-from="left">
                       <div class="section-content">
                         <div class="section-title-wrapper">
+                          <div class="subtitle-wrapper mb-20">
+                            <span class="section-subtitle">Get in Touch</span>
+                          </div>
                           <div class="title-wrapper">
-                            <h2 class="section-title">
-                              Ready to grow <br />your business?
+                            <h2 class="section-title" style="font-size: 60px; line-height: 1.1;">
+                              Ready to grow <br><span class="gold-gradient-text">your business?</span>
                             </h2>
                           </div>
                         </div>
                         <div class="text-wrapper mt-30">
                           <p class="text">
-                            Contact Renova Marketing Solutions today and
-                            discover how our marketing, technology, and
-                            advertising solutions can help your business achieve
-                            sustainable growth.
+                            Contact Renova Marketing Solutions today and discover how our marketing, technology, and branding solutions can help your business achieve sustainable growth.
                           </p>
                         </div>
-                        <ul class="contact-info-list">
-                          <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:hello@renovamarketing.com"
-                              >hello@renovamarketing.com</a
-                            >
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-globe"></i>
-                            <span>www.renovamarketing.com</span>
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Toronto, ON, Canada & New York, NY, USA</span>
-                          </li>
-                        </ul>
+                        
+                        <div class="contact-cards-grid mt-40">
+                          <!-- Card 1: Email -->
+                          <div class="contact-card">
+                            <div class="card-icon">
+                              <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                              <h4 class="card-title">Email Us</h4>
+                              <a href="mailto:hello@renovamarketing.com" class="card-link">hello@renovamarketing.com</a>
+                            </div>
+                          </div>
+                          <!-- Card 2: Website -->
+                          <div class="contact-card">
+                            <div class="card-icon">
+                              <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="card-content">
+                              <h4 class="card-title">Our Website</h4>
+                              <span class="card-text">www.renovamarketing.com</span>
+                            </div>
+                          </div>
+                          <!-- Card 3: Locations -->
+                          <div class="contact-card">
+                            <div class="card-icon">
+                              <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="card-content">
+                              <h4 class="card-title">Locations</h4>
+                              <span class="card-text">Toronto, ON, Canada <br> New York, NY, USA</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="col-lg-6 has_fade_anim" data-fade-from="right">
