@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Renova Marketing Solutions is a premier marketing and technology agency specializing in web development, branding, SEO, mobile apps, social media management."
+    />
+
+    <title>Services | Renova Marketing Solutions</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png" />
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/progressbar.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/master-web-agency.css" />
+    <style>
+      :root {
+        --theme: #c5a059 !important;
+        --action: #c5a059 !important;
+      }
+      img[src*="assets/imgs/icon/icon-s-"],
+      img[src*="assets/imgs/shape/img-s-"],
+      img[src*="arrow-right-half"] {
+        filter: hue-rotate(-32deg) saturate(55%) brightness(105%) !important;
+      }
+      .service-area-inner {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+      }
+      @media only screen and (max-width: 1199px) {
+        .service-area-inner {
+          padding-top: 60px !important;
+          padding-bottom: 60px !important;
+        }
+      }
+
+      /* Gold gradient text */
+      .gold-gradient-text {
+        background: linear-gradient(
+          135deg,
+          #f1d48f 0%,
+          #c5a059 50%,
+          #846226 100%
+        ) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        display: inline-block;
+      }
+
+      /* Sticky Footer Layout */
+      .body-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh !important;
+      }
+      .body-wrapper main {
+        flex: 1 0 auto !important;
+      }
+      .body-wrapper footer {
+        flex-shrink: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body class="font-heading-teko-bold">
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.body.classList.add("dark");
+        }
+      })();
+    </script>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="container" class="container-preloader">
+        <div class="animation-preloader">
+          <div class="spinner"></div>
+          <div class="txt-loading">
+            <span data-text="R" class="characters">R</span>
+            <span data-text="E" class="characters">E</span>
+            <span data-text="N" class="characters">N</span>
+            <span data-text="O" class="characters">O</span>
+            <span data-text="V" class="characters">V</span>
+            <span data-text="A" class="characters">A</span>
+          </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    </div>
+
+    <!-- Scroll to top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <!-- Switcher Area Start -->
+    <div class="switcher__area">
+      <div class="switcher__icon">
+        <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+        <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="switcher__items">
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">mode</p>
+          </div>
+          <div class="switcher__btn mode-type wc-col-2">
+            <button class="active" data-mode="light">light</button>
+            <button data-mode="dark">dark</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Language Support</p>
+          </div>
+          <div class="switcher__btn lang_dir wc-col-2">
+            <button class="active" data-mode="ltr">LTR</button>
+            <button data-mode="rtl">RTL</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Layout</p>
+          </div>
+          <div class="switcher__btn layout-type wc-col-2">
+            <button class="active" data-mode="full-width">Full Width</button>
+            <button data-mode="box-layout">Box Layout</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Cursor</p>
+          </div>
+          <div class="switcher__btn">
+            <select name="cursor-style" id="cursor_style">
+              <option value="1">default</option>
+              <option selected value="2">animated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Switcher Area End -->
+
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+      <div class="offcanvas-3__inner">
+        <div class="offcanvas-3__meta-wrapper">
+          <div class="">
+            <button
+              id="close_offcanvas"
+              class="close-button close-offcanvas"
+              onclick="hideCanvas3()"
+            >
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="">
+            <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+              <ul>
+                <li>
+                  <a href="mailto:hello@renovamarketing.com"
+                    >hello@renovamarketing.com</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html"
+                    >Toronto, ON, Canada <br />
+                    New York, NY, USA</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-3__social d-none d-md-block">
+              <p class="title">Follow Us</p>
+              <div class="offcanvas-3__social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offcanvas-3__menu-wrapper">
+          <nav class="nav-menu offcanvas-3__menu">
+            <ul>
+              <li><a href="index.html#hero">home</a></li>
+              <li><a href="services.html">services</a></li>
+              <li><a href="packages.html">packages</a></li>
+              <li><a href="index.html#portfolio">portfolio</a></li>
+              <li><a href="index.html#about">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- offcanvas end  -->
+
+    <!-- search modal start -->
+    <div
+      class="modal fade"
+      id="search-template"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="search-template"
+      aria-hidden="true"
+    >
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form action="#" class="form-search">
+              <input type="text" placeholder="Search" />
+              <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search modal end -->
+
+    <!-- Header area start -->
+    <header class="header-area">
+      <div class="container large">
+        <div class="header-area__inner">
+          <div
+            class="header__logo"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <a
+              href="index.html"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+              "
+            >
+              <img
+                class="show-light"
+                src="assets/imgs/logo/logo.png"
+                alt="Site Logo"
+                style="height: 50px"
+              />
+              <img
+                class="show-dark"
+                src="assets/imgs/logo/logo-light.png"
+                alt="Site Logo"
+                style="height: 50px"
+              />
+            </a>
+          </div>
+          <div class="header__nav pos-center">
+            <nav class="main-menu">
+              <ul>
+                <li><a href="index.html#hero">home</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="packages.html">packages</a></li>
+                <li><a href="index.html#portfolio">portfolio</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__button">
+            <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip">
+              <span data-text="Request Pricing">Request Pricing</span></a
+            >
+          </div>
+          <div class="header__navicon d-xl-none">
+            <button onclick="showCanvas3()" class="open-offcanvas">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header area end -->
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <div class="body-wrapper body-web-agency">
+          <!-- overlay switcher close  -->
+          <div class="overlay-switcher-close"></div>
+
+          <main>
+            <!-- services hero start -->
+            <section
+              class="contact-hero-area section-spacing-top"
+              style="
+                padding-top: 180px;
+                padding-bottom: 80px;
+                background: rgba(255, 255, 255, 0.01);
+              "
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="section-title-wrapper text-center">
+                      <h1
+                        class="section-title font-heading-teko-bold"
+                        style="
+                          font-size: 80px;
+                          text-transform: uppercase;
+                          margin-bottom: 20px;
+                        "
+                      >
+                        Our <span class="gold-gradient-text">Services</span>
+                      </h1>
+                      <p
+                        class="text"
+                        style="
+                          font-size: 20px;
+                          text-transform: uppercase;
+                          letter-spacing: 2px;
+                        "
+                      >
+                        <a
+                          href="index.html#hero"
+                          style="color: var(--secondary); text-decoration: none"
+                          >Home</a
+                        >
+                        <span style="color: #c5a059; margin: 0 10px">/</span>
+                        <span style="color: var(--primary)">Services</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- services hero end -->
+
+            <!-- service area start  -->
+            <section class="service-area" id="services">
+              <div class="container">
+                <div class="service-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div
+                        class="shape-1 has_fade_anim"
+                        data-fade-offset="0"
+                        data-delay="0.9"
+                      >
+                        <img
+                          src="assets/imgs/shape/img-s-68.webp"
+                          alt="image"
+                        />
+                      </div>
+                      <div class="title-wrapper has_text_move_anim">
+                        <h2 class="section-title">
+                          Our <span>Expert</span> Digital Services
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim">
+                        We combine creativity, technology, and strategic
+                        marketing to deliver customized solutions built for
+                        measurable growth.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="services-wrapper-box">
+                    <div class="services-wrapper">
+                      <!-- 01. Website Design & Development -->
+                      <div class="has_fade_anim" data-delay="0.10">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">01.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                Website Design & <br />
+                                Development
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  We build modern, responsive, and
+                                  high-converting websites that help businesses
+                                  establish credibility and generate results.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Business Websites</li>
+                                    <li>+ Corporate Websites</li>
+                                    <li>+ E-Commerce Stores</li>
+                                    <li>+ Landing Pages</li>
+                                    <li>+ Website Redesigns</li>
+                                    <li>+ Website Maintenance & Support</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-36.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-36-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 02. Web Application Development -->
+                      <div class="has_fade_anim" data-delay="0.15">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">02.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                Web Application <br />
+                                Development
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Custom web applications designed to improve
+                                  efficiency, automate workflows, and support
+                                  business growth.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Custom Web Apps</li>
+                                    <li>+ Customer Portals</li>
+                                    <li>+ Booking Systems</li>
+                                    <li>+ SaaS Platforms</li>
+                                    <li>+ Business Dashboards</li>
+                                    <li>+ API Integrations</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-37.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-37-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 03. Android App Development -->
+                      <div class="has_fade_anim" data-delay="0.20">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">03.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                Android App <br />
+                                Development
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Transform your business ideas into powerful
+                                  Android applications.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Custom Android Apps</li>
+                                    <li>+ UI/UX Design</li>
+                                    <li>+ App Testing</li>
+                                    <li>+ Play Store Deployment</li>
+                                    <li>+ Maintenance & Updates</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-38.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-38-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 04. iOS App Development -->
+                      <div class="has_fade_anim" data-delay="0.25">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">04.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                iOS App <br />
+                                Development
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Create premium mobile experiences for iPhone
+                                  and iPad users.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Custom iOS Apps</li>
+                                    <li>+ UI/UX Design</li>
+                                    <li>+ App Store Deployment</li>
+                                    <li>+ Performance Optimization</li>
+                                    <li>+ Ongoing Support</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-38.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-38-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 05. SEO Services -->
+                      <div class="has_fade_anim" data-delay="0.30">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">05.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                SEO <br />
+                                Services
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Improve search rankings, increase website
+                                  traffic, and generate more leads through
+                                  strategic SEO.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Technical SEO</li>
+                                    <li>+ On-Page SEO</li>
+                                    <li>+ Local SEO</li>
+                                    <li>+ Keyword Research</li>
+                                    <li>+ Content Optimization</li>
+                                    <li>+ SEO Reporting</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-39.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-39-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 06. Graphic Design & Branding -->
+                      <div class="has_fade_anim" data-delay="0.35">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">06.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                Graphic Design & <br />
+                                Branding
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Build a memorable brand identity through
+                                  professional design.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Logo Design</li>
+                                    <li>+ Brand Identity</li>
+                                    <li>+ Marketing Materials</li>
+                                    <li>+ Social Media Graphics</li>
+                                    <li>+ Print Design</li>
+                                    <li>+ Advertising Creatives</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-36.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-36-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- 07. Social Media Marketing -->
+                      <div class="has_fade_anim" data-delay="0.40">
+                        <a href="contact.html">
+                          <div class="service-box">
+                            <span class="number">07.</span>
+                            <div class="content">
+                              <h3 class="title">
+                                Social Media <br />
+                                Marketing
+                              </h3>
+                              <div class="content-last">
+                                <p class="text">
+                                  Grow your audience and strengthen your brand
+                                  presence through strategic social media
+                                  marketing.
+                                </p>
+                                <div class="feature-list">
+                                  <ul>
+                                    <li>+ Facebook Marketing</li>
+                                    <li>+ Instagram Marketing</li>
+                                    <li>+ LinkedIn Marketing</li>
+                                    <li>+ TikTok Marketing</li>
+                                    <li>+ YouTube Marketing</li>
+                                    <li>+ X (Twitter) Marketing</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="icon">
+                              <img
+                                class="show-light"
+                                src="assets/imgs/icon/icon-s-37.webp"
+                                alt="icon"
+                              />
+                              <img
+                                class="show-dark"
+                                src="assets/imgs/icon/icon-s-37-light.webp"
+                                alt="icon"
+                              />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- service area end  -->
+
+            <!-- enterprise area start  -->
+            <div class="enterprise-area">
+              <div class="container">
+                <div class="enterprise-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="text-wrapper">
+                      <p class="text has_text_move_anim">
+                        Our Technology Expertise includes
+                      </p>
+                    </div>
+                  </div>
+                  <div class="expertise-wrapper-box">
+                    <div class="expertise-wrapper">
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-31.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-31-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">WordPress</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-32.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-32-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">React.js</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="right"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-33.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-33-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Node.js</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="left"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-34.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-34-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Flutter</p>
+                      </div>
+                      <div
+                        class="expertise-box has_fade_anim"
+                        data-fade-from="left"
+                      >
+                        <div class="icon">
+                          <img
+                            class="show-light"
+                            src="assets/imgs/icon/icon-s-35.webp"
+                            alt="icon"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/icon/icon-s-35-light.webp"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="name">Redux</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- enterprise area end  -->
+
+            <!-- cta area start  -->
+            <section class="cta-area">
+              <div class="container">
+                <div class="cta-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="subtitle-wrapper">
+                        <span class="section-subtitle has_fade_anim"
+                          >🖐️ Hello
+                          <img
+                            class="show-light"
+                            src="assets/imgs/shape/img-s-6.webp"
+                            alt="image"
+                          />
+                          <img
+                            class="show-dark"
+                            src="assets/imgs/shape/img-s-6-light.webp"
+                            alt="image"
+                          />
+                        </span>
+                      </div>
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Let's Talk with us
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="btn-wrapper has_fade_anim">
+                      <a
+                        href="mailto:hello@renovamarketing.com"
+                        class="wc-btn wc-btn-underline"
+                        >hello@renovamarketing.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- cta area end  -->
+          </main>
+
+          <!-- footer area start  -->
+          <footer class="footer-area">
+            <div class="container large">
+              <div class="copyright-area-inner">
+                <div class="copyright-text">
+                  <p class="text">
+                    © 2026
+                    <a href="#">Renova Marketing Solutions</a>
+                    . All rights reserved.
+                  </p>
+                </div>
+
+                <ul class="social-links">
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+          <!-- footer area end  -->
+        </div>
+      </div>
+    </div>
+
+    <!-- All JS files -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
+
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          var darkBtn = document.querySelector(
+            '.mode-type button[data-mode="dark"]',
+          );
+          var lightBtn = document.querySelector(
+            '.mode-type button[data-mode="light"]',
+          );
+          if (darkBtn && lightBtn) {
+            darkBtn.classList.add("active");
+            lightBtn.classList.remove("active");
+          }
+        }
+        document.querySelectorAll(".mode-type button").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var mode = this.getAttribute("data-mode");
+            localStorage.setItem("theme", mode);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
